@@ -1,17 +1,12 @@
-/* =========================
-   SAWA DESIGN SYSTEM v0.1
-   ========================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 
 :root {
     --night: #111827;
     --paper: #F2E9D8;
+    --gold: #D8B66A;
     --wood: #8B6F47;
-    --light: #D8B66A;
     --ink: #1C1917;
-    --soft-ink: #44403C;
 }
 
 
@@ -23,35 +18,20 @@
 body {
     margin: 0;
     min-height: 100vh;
-
-    font-family: "Inter", sans-serif;
-
+    font-family: Inter, Arial, sans-serif;
     background: var(--paper);
     color: var(--ink);
-
-    line-height: 1.7;
 }
 
 
-a {
-    color: inherit;
-}
+.entrance {
 
+    background-color: var(--night);
 
-/* =========================
-   ENTRANCE
-   ========================= */
+    background-image:
+    radial-gradient(circle, #D8B66A 1px, transparent 1px);
 
-
-body.entrance {
-
-    background:
-        radial-gradient(circle at 20% 20%, rgba(216,182,106,0.25) 1px, transparent 2px),
-        radial-gradient(circle at 70% 30%, rgba(216,182,106,0.2) 1px, transparent 2px),
-        radial-gradient(circle at 40% 80%, rgba(216,182,106,0.2) 1px, transparent 2px),
-        var(--night);
-
-    background-size: 180px 180px;
+    background-size: 120px 120px;
 
     color: var(--paper);
 
@@ -64,21 +44,17 @@ body.entrance {
 
 .door {
 
-    max-width: 550px;
-
     text-align: center;
-
-    padding: 60px 30px;
+    max-width: 550px;
+    padding: 50px;
 
 }
 
 
 .door h1 {
 
-    letter-spacing: 0.35em;
-
+    letter-spacing: .4em;
     font-weight: 500;
-
     margin-bottom: 80px;
 
 }
@@ -86,58 +62,36 @@ body.entrance {
 
 .welcome {
 
-    font-size: 2.2rem;
-
-    margin-bottom: 30px;
+    font-size: 2rem;
 
 }
 
 
 .door p {
 
-    font-size: 1.2rem;
-
+    font-size: 1.15rem;
     font-weight: 300;
 
 }
-
-
-/* =========================
-   BUTTON
-   ========================= */
 
 
 .button {
 
     display: inline-block;
 
-    margin-top: 50px;
+    margin-top: 40px;
 
-    padding: 15px 45px;
+    padding: 15px 40px;
 
-    background: var(--light);
+    background: var(--gold);
 
     color: var(--night);
 
     text-decoration: none;
 
-    border-radius: 50px;
-
-    transition: transform .2s ease;
+    border-radius: 40px;
 
 }
-
-
-.button:hover {
-
-    transform: translateY(-3px);
-
-}
-
-
-/* =========================
-   HEADER
-   ========================= */
 
 
 header {
@@ -151,94 +105,49 @@ header {
 
     text-decoration: none;
 
-    letter-spacing: .25em;
+    color: var(--ink);
 
-    font-weight: 500;
+    letter-spacing: .3em;
 
 }
 
 
-
-/* =========================
-   ROOMS
-   ========================= */
-
-
-.room,
-.content {
+.room {
 
     max-width: 900px;
 
     margin: auto;
 
-    padding: 40px 30px 100px;
+    padding: 30px;
 
 }
 
 
-.room h1,
-.content h1 {
+.intro {
 
-    font-weight: 400;
-
-    font-size: 2.5rem;
-
-}
-
-
-.intro,
-.lead {
-
-    max-width: 650px;
-
-    font-size: 1.3rem;
-
-    color: var(--soft-ink);
+    font-size: 1.2rem;
 
     margin-bottom: 60px;
 
 }
 
 
-
-/* =========================
-   OBJECTS IN THE ROOM
-   ========================= */
-
-
 .card {
 
     background: white;
 
-    border-radius: 4px;
+    padding: 35px;
 
-    padding: 40px;
+    margin-bottom: 30px;
 
-    margin: 35px 0;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.06);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-
-}
-
-
-.card:hover {
-
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.1);
+    border-radius: 8px;
 
 }
 
 
 .card h2 {
 
-    font-size: .9rem;
+    font-size: .85rem;
 
     text-transform: uppercase;
 
@@ -246,94 +155,11 @@ header {
 
     color: var(--wood);
 
-    font-weight: 500;
-
-}
-
-
-.card h3 {
-
-    font-weight: 500;
-
-    font-size: 1.5rem;
-
 }
 
 
 .card a {
 
     color: var(--wood);
-
-    text-decoration: none;
-
-}
-
-
-
-/* =========================
-   CONTENT
-   ========================= */
-
-
-.content {
-
-    background: var(--paper);
-
-}
-
-
-.content h2 {
-
-    margin-top: 60px;
-
-    font-weight: 500;
-
-}
-
-
-li {
-
-    margin-bottom: 12px;
-
-}
-
-
-
-/* =========================
-   MOBILE
-   ========================= */
-
-
-@media (max-width: 700px) {
-
-
-    header {
-
-        padding: 25px;
-
-    }
-
-
-    .door {
-
-        padding: 40px 20px;
-
-    }
-
-
-    .door h1 {
-
-        margin-bottom: 50px;
-
-    }
-
-
-    .room,
-    .content {
-
-        padding: 20px;
-
-    }
-
 
 }
