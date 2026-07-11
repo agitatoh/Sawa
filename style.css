@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
 :root {
     --night: #111827;
-    --paper: #F2E9D8;
+    --cream: #F2E9D8;
+    --gold: #D8B66A;
     --wood: #8B6F47;
-    --light: #D8B66A;
-    --ink: #1C1917;
-    --soft: #57534E;
+    --muted: rgba(242,233,216,0.65);
 }
 
 
@@ -14,130 +15,37 @@
 
 
 body {
+
     margin: 0;
+
     min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
 
-    background: var(--paper);
-    color: var(--ink);
+    background: var(--night);
+
+    color: var(--cream);
 
     line-height: 1.7;
+
 }
 
 
 a {
+
     color: inherit;
-}
-
-
-
-/* =====================
-   FRONT DOOR
-   ===================== */
-
-
-.entrance {
-
-    min-height: 100vh;
-
-    background:
-        radial-gradient(circle at 20% 20%, rgba(216,182,106,0.25) 1px, transparent 2px),
-        radial-gradient(circle at 70% 30%, rgba(216,182,106,0.2) 1px, transparent 2px),
-        radial-gradient(circle at 40% 80%, rgba(216,182,106,0.2) 1px, transparent 2px),
-        var(--night);
-
-    color: var(--paper);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.door {
-
-    max-width: 550px;
-
-    text-align: center;
-
-    padding: 60px 30px;
 
 }
 
 
-.door h1 {
-
-    letter-spacing: 0.35em;
-
-    font-weight: 500;
-
-    margin-bottom: 70px;
-
-}
-
-
-.welcome {
-
-    font-size: 2.2rem;
-
-    margin-bottom: 30px;
-
-}
-
-
-.door p {
-
-    font-size: 1.2rem;
-
-    font-weight: 300;
-
-}
-
-
-
-/* =====================
-   BUTTON
-   ===================== */
-
-
-.button {
-
-    display: inline-block;
-
-    margin-top: 45px;
-
-    padding: 15px 40px;
-
-    background: var(--light);
-
-    color: var(--night);
-
-    text-decoration: none;
-
-    border-radius: 50px;
-
-    transition: 0.2s ease;
-
-}
-
-
-.button:hover {
-
-    transform: translateY(-3px);
-
-}
-
-
-
-/* =====================
+/* ======================
    HEADER
-   ===================== */
+====================== */
 
 
 header {
 
-    padding: 35px 50px;
+    padding: 40px 60px;
 
 }
 
@@ -146,167 +54,282 @@ header {
 
     text-decoration: none;
 
-    letter-spacing: 0.25em;
+    letter-spacing: .35em;
 
-    font-weight: 500;
+    font-size: .9rem;
 
 }
 
 
 
-/* =====================
-   ROOMS
-   ===================== */
+/* ======================
+   ENTRANCE
+====================== */
 
 
-.room,
-.content {
+.entrance {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.door {
+
+    max-width: 560px;
+
+    text-align: center;
+
+    padding: 80px 30px;
+
+}
+
+
+.door h1 {
+
+    font-weight: 400;
+
+    letter-spacing: .5em;
+
+    margin-bottom: 100px;
+
+}
+
+
+.door p {
+
+    font-weight: 300;
+
+    font-size: 1.2rem;
+
+    margin: 18px 0;
+
+}
+
+
+.welcome {
+
+    font-size: 2.4rem !important;
+
+}
+
+
+
+/* ======================
+   BUTTON
+====================== */
+
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 60px;
+
+    padding: 12px 40px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 30px;
+
+    color: var(--cream);
+
+    text-decoration: none;
+
+    transition: background .3s ease;
+
+}
+
+
+.button:hover {
+
+    background: rgba(216,182,106,.15);
+
+}
+
+
+
+/* ======================
+   THE ROOM
+====================== */
+
+
+.room {
 
     max-width: 900px;
 
     margin: auto;
 
-    padding: 40px 30px 100px;
+    padding: 30px 50px 120px;
 
 }
 
 
-.room h1,
-.content h1 {
+.room-title {
 
-    font-size: 2.5rem;
+    margin-top: 60px;
 
-    font-weight: 400;
-
-}
-
-
-.intro,
-.lead {
-
-    max-width: 650px;
-
-    font-size: 1.3rem;
-
-    color: var(--soft);
-
-    margin-bottom: 60px;
-
-}
-
-
-
-/* =====================
-   OBJECTS
-   ===================== */
-
-
-.card {
-
-    background: white;
-
-    padding: 40px;
-
-    margin: 35px 0;
-
-    border-radius: 6px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-
-    transition: 0.25s ease;
-
-}
-
-
-.card:hover {
-
-    transform: translateY(-4px);
-
-}
-
-
-.card h2 {
-
-    font-size: 0.85rem;
+    font-size: .9rem;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.15em;
+    letter-spacing: .25em;
 
-    color: var(--wood);
+    color: var(--muted);
 
 }
 
 
-.card h3 {
+
+.room-intro {
 
     font-size: 1.5rem;
 
-    font-weight: 500;
+    font-weight: 300;
+
+    max-width: 650px;
+
+    margin-bottom: 90px;
 
 }
 
 
-.card a {
 
-    color: var(--wood);
+/* ======================
+   OBJECTS
+====================== */
+
+
+.object {
+
+    margin: 70px 0;
+
+    max-width: 650px;
+
+}
+
+
+
+.object-label {
+
+    font-size: .8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .2em;
+
+    color: var(--gold);
+
+}
+
+
+
+.object h2 {
+
+    font-weight: 400;
+
+    font-size: 2rem;
+
+    margin: 12px 0;
+
+}
+
+
+
+.object p {
+
+    color: var(--muted);
+
+}
+
+
+
+.object a {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: var(--cream);
 
     text-decoration: none;
 
+    border-bottom: 1px solid var(--gold);
+
 }
 
 
 
-/* =====================
+/* ======================
    CONTENT
-   ===================== */
+====================== */
 
 
-.content section {
+.content {
 
-    margin-bottom: 50px;
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+}
+
+
+.content h1 {
+
+    font-weight: 400;
+
+    font-size: 3rem;
+
+}
+
+
+.lead {
+
+    font-size: 1.4rem;
+
+    font-weight: 300;
 
 }
 
 
 .content h2 {
 
-    margin-top: 50px;
+    margin-top: 70px;
 
-    font-weight: 500;
+    font-weight: 400;
 
 }
 
 
 
-/* =====================
-   MOBILE
-   ===================== */
+/* MOBILE */
 
-
-@media (max-width: 700px) {
-
+@media(max-width:700px){
 
     header {
 
-        padding: 25px;
+        padding: 30px;
 
     }
 
 
-    .room,
-    .content {
+    .room {
 
-        padding: 25px;
+        padding: 20px 30px;
 
     }
 
 
     .door {
 
-        padding: 40px 20px;
+        padding: 50px 20px;
 
     }
-
 
 }
