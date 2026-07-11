@@ -1,4 +1,6 @@
-:root {
+body {
+    outline: 10px solid red !important;
+}:root {
     --night: #111827;
     --cream: #F2E9D8;
     --gold: #D8B66A;
@@ -345,4 +347,8 @@ header {
     }
 
 
+}
+
+body {
+    outline: 10px solid red !important;
 }
