@@ -1,86 +1,339 @@
+/* =========================
+   SAWA DESIGN SYSTEM v0.1
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+
+:root {
+    --night: #111827;
+    --paper: #F2E9D8;
+    --wood: #8B6F47;
+    --light: #D8B66A;
+    --ink: #1C1917;
+    --soft-ink: #44403C;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     margin: 0;
     min-height: 100vh;
-    background: #111827;
-    color: #F2E9D8;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--paper);
+    color: var(--ink);
+
+    line-height: 1.7;
 }
 
 
-header {
-    padding: 30px;
+a {
+    color: inherit;
 }
 
 
-.logo {
-    color: #F2E9D8;
-    text-decoration: none;
-    font-weight: bold;
-}
+/* =========================
+   ENTRANCE
+   ========================= */
 
 
-.entrance {
+body.entrance {
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(216,182,106,0.25) 1px, transparent 2px),
+        radial-gradient(circle at 70% 30%, rgba(216,182,106,0.2) 1px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(216,182,106,0.2) 1px, transparent 2px),
+        var(--night);
+
+    background-size: 180px 180px;
+
+    color: var(--paper);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
 .door {
-    max-width: 500px;
+
+    max-width: 550px;
+
     text-align: center;
-    padding: 40px;
+
+    padding: 60px 30px;
+
 }
 
 
-h1 {
-    font-size: 3rem;
-    letter-spacing: 0.1em;
+.door h1 {
+
+    letter-spacing: 0.35em;
+
+    font-weight: 500;
+
+    margin-bottom: 80px;
+
 }
 
 
 .welcome {
-    font-size: 2rem;
-    margin-top: 50px;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 30px;
+
 }
+
+
+.door p {
+
+    font-size: 1.2rem;
+
+    font-weight: 300;
+
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
 
 
 .button {
+
     display: inline-block;
-    margin-top: 40px;
-    padding: 14px 32px;
-    background: #D8B66A;
-    color: #111827;
+
+    margin-top: 50px;
+
+    padding: 15px 45px;
+
+    background: var(--light);
+
+    color: var(--night);
+
     text-decoration: none;
-    border-radius: 30px;
+
+    border-radius: 50px;
+
+    transition: transform .2s ease;
+
 }
+
+
+.button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+
+header {
+
+    padding: 35px 50px;
+
+}
+
+
+.logo {
+
+    text-decoration: none;
+
+    letter-spacing: .25em;
+
+    font-weight: 500;
+
+}
+
+
+
+/* =========================
+   ROOMS
+   ========================= */
 
 
 .room,
 .content {
+
     max-width: 900px;
+
     margin: auto;
-    padding: 40px;
+
+    padding: 40px 30px 100px;
+
 }
 
 
+.room h1,
+.content h1 {
+
+    font-weight: 400;
+
+    font-size: 2.5rem;
+
+}
+
+
+.intro,
+.lead {
+
+    max-width: 650px;
+
+    font-size: 1.3rem;
+
+    color: var(--soft-ink);
+
+    margin-bottom: 60px;
+
+}
+
+
+
+/* =========================
+   OBJECTS IN THE ROOM
+   ========================= */
+
+
 .card {
-    background: #F2E9D8;
-    color: #111827;
-    padding: 30px;
-    margin: 30px 0;
-    border-radius: 12px;
+
+    background: white;
+
+    border-radius: 4px;
+
+    padding: 40px;
+
+    margin: 35px 0;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.1);
+
+}
+
+
+.card h2 {
+
+    font-size: .9rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    color: var(--wood);
+
+    font-weight: 500;
+
+}
+
+
+.card h3 {
+
+    font-weight: 500;
+
+    font-size: 1.5rem;
+
 }
 
 
 .card a {
-    color: #8B6F47;
+
+    color: var(--wood);
+
+    text-decoration: none;
+
 }
 
 
-.lead,
-.intro {
-    font-size: 1.3rem;
-    max-width: 650px;
+
+/* =========================
+   CONTENT
+   ========================= */
+
+
+.content {
+
+    background: var(--paper);
+
+}
+
+
+.content h2 {
+
+    margin-top: 60px;
+
+    font-weight: 500;
+
+}
+
+
+li {
+
+    margin-bottom: 12px;
+
+}
+
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+
+@media (max-width: 700px) {
+
+
+    header {
+
+        padding: 25px;
+
+    }
+
+
+    .door {
+
+        padding: 40px 20px;
+
+    }
+
+
+    .door h1 {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .room,
+    .content {
+
+        padding: 20px;
+
+    }
+
+
 }
