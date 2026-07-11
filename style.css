@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
+
 :root {
     --night: #111827;
     --cream: #F2E9D8;
@@ -7,6 +8,11 @@
     --wood: #8B6F47;
     --muted: rgba(242,233,216,0.65);
 }
+
+
+/* ======================
+   FOUNDATION
+====================== */
 
 
 * {
@@ -22,7 +28,13 @@ body {
 
     font-family: "Inter", sans-serif;
 
-    background: var(--night);
+    background:
+        radial-gradient(circle at 20% 20%, rgba(216,182,106,0.18) 1px, transparent 2px),
+        radial-gradient(circle at 70% 35%, rgba(216,182,106,0.12) 1px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(216,182,106,0.15) 1px, transparent 2px),
+        var(--night);
+
+    background-size: 220px 220px;
 
     color: var(--cream);
 
@@ -32,10 +44,9 @@ body {
 
 
 a {
-
     color: inherit;
-
 }
+
 
 
 /* ======================
@@ -57,6 +68,8 @@ header {
     letter-spacing: .35em;
 
     font-size: .9rem;
+
+    font-weight: 500;
 
 }
 
@@ -95,16 +108,16 @@ header {
 
     letter-spacing: .5em;
 
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 
 }
 
 
 .door p {
 
-    font-weight: 300;
-
     font-size: 1.2rem;
+
+    font-weight: 300;
 
     margin: 18px 0;
 
@@ -120,7 +133,7 @@ header {
 
 
 /* ======================
-   BUTTON
+   BUTTONS
 ====================== */
 
 
@@ -128,7 +141,7 @@ header {
 
     display: inline-block;
 
-    margin-top: 60px;
+    margin-top: 55px;
 
     padding: 12px 40px;
 
@@ -136,9 +149,9 @@ header {
 
     border-radius: 30px;
 
-    color: var(--cream);
-
     text-decoration: none;
+
+    color: var(--cream);
 
     transition: background .3s ease;
 
@@ -147,37 +160,38 @@ header {
 
 .button:hover {
 
-    background: rgba(216,182,106,.15);
+    background: rgba(216,182,106,0.15);
 
 }
 
 
 
 /* ======================
-   THE ROOM
+   COMMON ROOM
 ====================== */
 
 
-.room {
+.room,
+.content {
 
     max-width: 900px;
 
     margin: auto;
 
-    padding: 30px 50px 120px;
+    padding: 60px 50px 120px;
 
 }
 
 
 .room-title {
 
-    margin-top: 60px;
-
-    font-size: .9rem;
+    margin-top: 50px;
 
     text-transform: uppercase;
 
     letter-spacing: .25em;
+
+    font-size: .8rem;
 
     color: var(--muted);
 
@@ -187,13 +201,15 @@ header {
 
 .room-intro {
 
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    margin-bottom: 100px;
+
     font-size: 1.5rem;
 
     font-weight: 300;
-
-    max-width: 650px;
-
-    margin-bottom: 90px;
 
 }
 
@@ -206,9 +222,9 @@ header {
 
 .object {
 
-    margin: 70px 0;
-
     max-width: 650px;
+
+    margin: 75px 0;
 
 }
 
@@ -216,13 +232,13 @@ header {
 
 .object-label {
 
-    font-size: .8rem;
+    color: var(--gold);
 
     text-transform: uppercase;
 
     letter-spacing: .2em;
 
-    color: var(--gold);
+    font-size: .8rem;
 
 }
 
@@ -252,9 +268,7 @@ header {
 
     display: inline-block;
 
-    margin-top: 20px;
-
-    color: var(--cream);
+    margin-top: 25px;
 
     text-decoration: none;
 
@@ -265,28 +279,18 @@ header {
 
 
 /* ======================
-   CONTENT
+   READING / CONTENT ROOM
 ====================== */
-
-
-.content {
-
-    max-width: 700px;
-
-    margin: auto;
-
-    padding: 80px 30px;
-
-}
 
 
 .content h1 {
 
-    font-weight: 400;
-
     font-size: 3rem;
 
+    font-weight: 400;
+
 }
+
 
 
 .lead {
@@ -295,7 +299,10 @@ header {
 
     font-weight: 300;
 
+    color: var(--muted);
+
 }
+
 
 
 .content h2 {
@@ -307,21 +314,25 @@ header {
 }
 
 
+.content li {
 
-/* MOBILE */
+    margin-bottom: 12px;
+
+}
+
+
+
+/* ======================
+   MOBILE
+====================== */
+
 
 @media(max-width:700px){
+
 
     header {
 
         padding: 30px;
-
-    }
-
-
-    .room {
-
-        padding: 20px 30px;
 
     }
 
@@ -331,5 +342,14 @@ header {
         padding: 50px 20px;
 
     }
+
+
+    .room,
+    .content {
+
+        padding: 40px 25px 80px;
+
+    }
+
 
 }
