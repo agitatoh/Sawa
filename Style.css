@@ -1,165 +1,328 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 
 :root {
+
     --night: #111827;
     --paper: #F2E9D8;
-    --gold: #D8B66A;
     --wood: #8B6F47;
+    --light: #D8B66A;
     --ink: #1C1917;
+    --soft: #57534E;
+
 }
+
 
 
 * {
+
     box-sizing: border-box;
+
 }
+
 
 
 body {
+
     margin: 0;
+
     min-height: 100vh;
-    font-family: Inter, Arial, sans-serif;
+
+    font-family: "Inter", sans-serif;
+
     background: var(--paper);
+
     color: var(--ink);
+
+    line-height: 1.7;
+
 }
+
+
+
+a {
+
+    color: inherit;
+
+}
+
+
+
+/* FRONT DOOR */
 
 
 .entrance {
 
-    background-color: var(--night);
+    background:
 
-    background-image:
-    radial-gradient(circle, #D8B66A 1px, transparent 1px);
+    radial-gradient(circle at 20% 20%, rgba(216,182,106,.25) 1px, transparent 2px),
 
-    background-size: 120px 120px;
+    radial-gradient(circle at 70% 30%, rgba(216,182,106,.2) 1px, transparent 2px),
+
+    radial-gradient(circle at 40% 80%, rgba(216,182,106,.2) 1px, transparent 2px),
+
+    var(--night);
+
 
     color: var(--paper);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
+
 
 
 .door {
 
-    text-align: center;
-    max-width: 550px;
-    padding: 50px;
+    text-align:center;
+
+    max-width:550px;
+
+    padding:60px 30px;
 
 }
+
 
 
 .door h1 {
 
-    letter-spacing: .4em;
-    font-weight: 500;
-    margin-bottom: 80px;
+    letter-spacing:.35em;
+
+    font-weight:500;
+
+    margin-bottom:70px;
 
 }
+
 
 
 .welcome {
 
-    font-size: 2rem;
+    font-size:2.2rem;
 
 }
+
 
 
 .door p {
 
-    font-size: 1.15rem;
-    font-weight: 300;
+    font-size:1.2rem;
+
+    font-weight:300;
 
 }
+
+
+
+/* BUTTON */
 
 
 .button {
 
-    display: inline-block;
+    display:inline-block;
 
-    margin-top: 40px;
+    margin-top:45px;
 
-    padding: 15px 40px;
+    padding:15px 40px;
 
-    background: var(--gold);
+    background:var(--light);
 
-    color: var(--night);
+    color:var(--night);
 
-    text-decoration: none;
+    text-decoration:none;
 
-    border-radius: 40px;
+    border-radius:50px;
+
+    transition:.2s;
 
 }
+
+
+
+.button:hover {
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* HEADER */
 
 
 header {
 
-    padding: 35px 50px;
+    padding:35px 50px;
 
 }
+
 
 
 .logo {
 
-    text-decoration: none;
+    text-decoration:none;
 
-    color: var(--ink);
+    letter-spacing:.25em;
 
-    letter-spacing: .3em;
-
-}
-
-
-.room {
-
-    max-width: 900px;
-
-    margin: auto;
-
-    padding: 30px;
+    font-weight:500;
 
 }
 
 
-.intro {
 
-    font-size: 1.2rem;
+/* ROOMS */
 
-    margin-bottom: 60px;
+
+.room,
+.content {
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:40px 30px 100px;
 
 }
+
+
+
+.room h1,
+.content h1 {
+
+    font-size:2.5rem;
+
+    font-weight:400;
+
+}
+
+
+
+.intro,
+.lead {
+
+    max-width:650px;
+
+    font-size:1.3rem;
+
+    color:var(--soft);
+
+    margin-bottom:60px;
+
+}
+
+
+
+/* OBJECTS */
 
 
 .card {
 
-    background: white;
+    background:white;
 
-    padding: 35px;
+    padding:40px;
 
-    margin-bottom: 30px;
+    margin:35px 0;
 
-    border-radius: 8px;
+    border-radius:6px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    transition:.25s;
 
 }
+
+
+
+.card:hover {
+
+    transform:translateY(-4px);
+
+}
+
 
 
 .card h2 {
 
-    font-size: .85rem;
+    font-size:.85rem;
 
-    text-transform: uppercase;
+    text-transform:uppercase;
 
-    letter-spacing: .15em;
+    letter-spacing:.15em;
 
-    color: var(--wood);
+    color:var(--wood);
 
 }
 
 
+
+.card h3 {
+
+    font-size:1.5rem;
+
+    font-weight:500;
+
+}
+
+
+
 .card a {
 
-    color: var(--wood);
+    color:var(--wood);
+
+    text-decoration:none;
+
+}
+
+
+
+/* CONTENT */
+
+
+.content section {
+
+    margin-bottom:50px;
+
+}
+
+
+.content h2 {
+
+    margin-top:50px;
+
+    font-weight:500;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+    header {
+
+        padding:25px;
+
+    }
+
+
+    .room,
+    .content {
+
+        padding:25px;
+
+    }
+
+
+    .door {
+
+        padding:40px 20px;
+
+    }
 
 }
